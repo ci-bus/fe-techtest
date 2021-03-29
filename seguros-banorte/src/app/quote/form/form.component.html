@@ -1,0 +1,66 @@
+<div class="form-container">
+    <form *ngIf="!sent" [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+        <div class="title text-center">
+            Cotiza tu <div class="break"></div>Seguro Automotriz
+        </div>
+        <div class="label text-center info">
+            ¡Resultados instántaneos!
+        </div>
+        <div class="gray-mobile">
+            <div class="form-groups">
+                <div class="group-brand">
+                    <label>Marca del auto</label>
+                    <mat-form-field floatLabel="never">
+                        <mat-select formControlName="brand" (selectionChange)="selectBrand($event.value)">
+                            <mat-option *ngFor="let car of carBrands" [value]="car.id">
+                                {{car.brand}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-placeholder class="placeholder">Marca</mat-placeholder>
+                    </mat-form-field>
+                </div>
+                <div class="group-model">
+                    <label>Modelo del auto</label>
+                    <mat-form-field floatLabel="never">
+                        <mat-select formControlName="model">
+                            <mat-option *ngFor="let model of carModels" [value]="model.id">
+                                {{model.model}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-placeholder class="placeholder">Modelo</mat-placeholder>
+                    </mat-form-field>
+                </div><br>
+                <div class="group-year">
+                    <label>Año</label>
+                    <mat-form-field floatLabel="never" [style.width.px]=90>
+                        <mat-select formControlName="year">
+                            <mat-option *ngFor="let year of years" [value]="year.value">
+                                {{year.value}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-placeholder class="placeholder">Año</mat-placeholder>
+                    </mat-form-field>
+                </div>
+                <div class="group-email">
+                    <label>Email</label>
+                    <mat-form-field floatLabel="never" [style.width.%]=100>
+                        <input type="email" matInput formControlName="email" email>
+                        <mat-placeholder class="placeholder">Email</mat-placeholder>
+                    </mat-form-field>
+                </div>
+            </div>
+            <button *ngIf="!sending" mat-flat-button color="primary">Cotizar</button>
+            <div *ngIf="sending" class="text-center">
+                <img src="/assets/images/sending.svg">
+            </div>
+            <div class="recover text-center">
+                <a>
+                    Recuperar cotización
+                </a>
+            </div>
+        </div>
+    </form>
+    <div *ngIf="sent" class="container-sent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="check" width="50" height="50" viewBox="0 0 166 150.9"><path d="M0.3 96l62.4 54.1L165.6 0.3"/></svg> Enviado!
+    </div>
+</div>

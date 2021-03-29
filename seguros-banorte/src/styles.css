@@ -1,0 +1,30 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field-infix {
+    border: 1px solid #CCC;
+    margin-top: 5px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding-left: 0.5em;
+}
+
+@media only screen and (max-width: 520px) {
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        margin-bottom: -24px;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-infix {
+        padding: 1em;
+        border-bottom: 0;
+        background-color: white;
+    }
+}

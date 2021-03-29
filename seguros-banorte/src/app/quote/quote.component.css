@@ -1,0 +1,99 @@
+.main-container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 73px);
+    background-color: #eaeaea;
+    display: flex;
+}
+
+.band {
+    flex: 1;
+    background-color: #ff9300;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    font-size: 29px;
+    color: #5c5c5c;
+    line-height: 1em;
+}
+
+.container-form {
+    flex: 2;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 8;
+}
+
+.bloq1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bloq2, .bloq3 {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+}
+
+.flex-1-5 {
+    flex: 1.5;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+@media only screen and (min-width: 1200px) {
+    .bloq1 {
+        flex: 2;
+    }
+    .bloq3 {
+        flex: 5;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .bloq1 {
+        flex: 0.5;
+    }
+    .bloq3 {
+        flex: 3;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .info > span {
+        display: none;
+    }
+    .bloq1, .bloq3 {
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .bloq1, .bloq3 {
+        flex: 0.3;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .main-container {
+        background-color: white;
+    }
+    .container-form {
+        box-shadow: none;
+    }
+    .info > span {
+        display: none;
+    }
+    .bloq1, .bloq3 {
+        display: none;
+    }
+    .bloq2 > .flex-1 {
+        display: none;
+    }
+}
