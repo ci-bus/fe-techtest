@@ -4,6 +4,7 @@
 
 1. Node.js (LTS recommended)
 2. npm (installed with node.js)
+3. MongoDB
 
 ## Installation
 
