@@ -4,7 +4,8 @@
 
 1. Node.js (LTS recommended)
 2. npm (installed with node.js)
-3. MongoDB
+3. MongoDB (lasted version)
+4. Angular CLI (lasted version)
 
 ## Installation
 
